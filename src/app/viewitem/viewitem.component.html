@@ -1,0 +1,55 @@
+<table>
+    <tr>
+        <th>
+            Item Name
+        </th>
+        <th>
+            Company Name
+        </th>
+        <th>
+            Item Id
+        </th>
+        <th>
+            Item Price
+        </th>
+        <th>
+            Item Quntity
+        </th>
+        <th>
+            Edit Item
+        </th>
+        <th>
+            Remove Item
+        </th>
+        <th>
+            Add To Cart
+        </th>
+    </tr>
+    <tr *ngFor="let i of m">
+<td>
+    {{i.itemname}}
+</td>
+<td>
+    {{i.itemcmpny}}
+
+</td>
+<td>
+{{i.itemid}}
+</td>
+<td>
+{{i.itemprice}}
+</td>
+<td>
+    {{i.itemqty}}
+</td>
+<td>
+    <button (click)="Editdata(i.itemid);">Edit</button>
+</td>
+<td>
+    <button (click)="Deletedata(i.itemid);">Remove</button>
+</td>
+<td>
+    <button (click)="Addtocart();">ADD TO CART</button>
+</td>
+    </tr>
+</table>
